@@ -9,7 +9,7 @@ function categoryCounter(categories) {
 
   return categories.forEach((element) => {
     const title = element.firstElementChild.textContent;
-    const listEl = element.querySelector("ul");
+    const listEl = element.lastElementChild;
 
     return console.log(
       `Category: ${title} \nElements: ${listEl.children.length}`

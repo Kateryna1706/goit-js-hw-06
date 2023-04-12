@@ -22,7 +22,7 @@ function createGallery(array) {
   );
 }
 
-const stringElements = createGallery(images).join("\n");
+const stringElements = createGallery(images).join("");
 console.log(stringElements);
 
 list.insertAdjacentHTML("afterbegin", stringElements);

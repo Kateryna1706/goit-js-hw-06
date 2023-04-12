@@ -5,9 +5,13 @@ function handleBlur(event) {
 
   const dataLength = event.currentTarget.dataset.length;
 
-  return Number(lengthValue) === Number(dataLength)
-    ? event.currentTarget.classList.add("valid")
-    : event.currentTarget.classList.add("invalid");
+  if (Number(lengthValue) === Number(dataLength)) {
+    event.currentTarget.classList.add("valid");
+    event.currentTarget.classList.remove("invalid");
+  } else {
+    event.currentTarget.classList.add("invalid");
+    event.currentTarget.classList.remove("valid");
+  }
 }
 
 input.addEventListener("blur", handleBlur);

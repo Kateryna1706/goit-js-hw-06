@@ -14,14 +14,12 @@ function createBoxes(amount) {
   const newElements = "<div></div>".repeat(amount);
 
   boxes.insertAdjacentHTML("afterbegin", newElements);
-  let width = 20;
-  let height = 20;
+  let size = 20;
   for (const child of boxes.children) {
-    height += 10;
-    width += 10;
+    size += 10;
 
-    child.style.width += `${width}px`;
-    child.style.height += `${height}px`;
+    child.style.width += `${size}px`;
+    child.style.height += `${size}px`;
     child.style.backgroundColor = getRandomHexColor();
   }
 }
